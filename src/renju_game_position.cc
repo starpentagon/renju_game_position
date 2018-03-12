@@ -95,6 +95,12 @@ int main(int argc, char* argv[])
         break;
       }
 
+      const bool is_terminate_move = board.IsTerminateMove(move);
+
+      if(is_terminate_move){
+        break;
+      }
+
       board.MakeMove(move);
       board_move += move;
 
