@@ -78,6 +78,10 @@ int main(int argc, char* argv[])
   multimap<HashValue, PositionInfo> game_position_db;
 
   for(size_t i=0, size=game_record_list.size(); i<size; i++){
+    if(i % 10000 == 0){
+      cerr << i << " / " << size << " is finished" << endl;
+    }
+
     const auto game_record_str = game_record_list[i];
     const auto game_result = game_result_list[i];
 
